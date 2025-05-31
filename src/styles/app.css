@@ -1,0 +1,184 @@
+/* Fundo escuro com tom avermelhado */
+.app-container {
+  background: linear-gradient(135deg, #1a0000 0%, #330000 100%);
+  min-height: 100vh;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ff4d4d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #ff6666;
+  text-shadow: 0 0 10px #ff3333;
+}
+
+/* Input estilizado */
+input {
+  padding: 12px 15px;
+  width: 280px;
+  border-radius: 8px;
+  border: 2px solid #ff4d4d;
+  background: #330000;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 8px #ff0000;
+}
+
+/* Botão com animação de hover */
+button {
+  padding: 12px 22px;
+  margin: 10px auto;
+  background-color: #b30000;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 0 15px #b30000aa;
+  transition: background-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+button:hover {
+  background-color: #ff0000;
+  box-shadow: 0 0 25px #ff0000cc;
+  transform: scale(1.05);
+}
+
+/* Lista dos nomes */
+.hello-list {
+  margin-top: 30px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Cada item da lista - alinhado linha */
+.hello-item {
+  background: #330000cc;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ff9999;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 0 6px #99000099;
+  transition: background-color 0.25s ease;
+}
+
+.hello-item:hover {
+  background-color: #4d0000dd;
+}
+
+/* Botão remover estilo diferente */
+.hello-item button {
+  background-color: transparent;
+  border: 2px solid #ff4d4d;
+  color: #ff4d4d;
+  padding: 6px 14px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.hello-item button:hover {
+  background-color: #ff4d4d;
+  color: #330000;
+  box-shadow: 0 0 8px #ff4d4dcc;
+  transform: scale(1.1);
+}
+
+/* Mensagem de erro */
+.error-message {
+  color: #ff3333;
+  font-weight: 700;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Animação simples fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.edit-input {
+  background-color: #330000;
+  border: 2px solid #ff4d4d;
+  border-radius: 8px;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.edit-input:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 8px #ff0000;
+}
+
+
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .hello-list {
+    width: 100%;
+  }
+
+  .hello-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hello-item button {
+    align-self: flex-end;
+  }
+}
